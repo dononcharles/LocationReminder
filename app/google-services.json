@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "401655889713",
+    "project_id": "locationreminder-9161a",
+    "storage_bucket": "locationreminder-9161a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401655889713:android:cc72530975fa87dcbfba10",
+        "android_client_info": {
+          "package_name": "com.schaldrack.locationreminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401655889713-0jcqtka6dn7klgcdotqgq20uk2s13g05.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.schaldrack.locationreminder",
+            "certificate_hash": "ed2b96902c67e88edb66c92675fa43e5fa2e6066"
+          }
+        },
+        {
+          "client_id": "401655889713-lvb2knql5kjl4lnp0l1gghdgd6294fno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtigNkB5aXfbI1jel3ninfFNT8-PspEco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401655889713-lvb2knql5kjl4lnp0l1gghdgd6294fno.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
