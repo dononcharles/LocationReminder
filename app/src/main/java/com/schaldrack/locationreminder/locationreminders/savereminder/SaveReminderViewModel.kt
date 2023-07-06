@@ -95,7 +95,7 @@ class SaveReminderViewModel(val app: Application, private val dataSource: Remind
     /**
      * This function will be called when the user want to edit a reminder
      */
-    fun editReminder(reminderData: ReminderDataItem) {
+    fun updateReminderLocation(reminderData: ReminderDataItem) {
         reminderTitle.value = reminderData.title
         reminderDescription.value = reminderData.description
         reminderSelectedLocationStr.value = reminderData.location

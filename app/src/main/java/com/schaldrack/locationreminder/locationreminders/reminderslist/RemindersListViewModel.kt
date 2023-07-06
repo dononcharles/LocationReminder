@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.schaldrack.locationreminder.base.BaseViewModel
 import com.schaldrack.locationreminder.data.ReminderDataSource
-import com.schaldrack.locationreminder.data.dto.ReminderDTO
 import com.schaldrack.locationreminder.data.dto.Result
 import com.schaldrack.locationreminder.utils.DataStoreManager
 import com.schaldrack.locationreminder.utils.DataStoreManager.Companion.PREF_KEY_IS_USER_CONNECTED
@@ -29,10 +28,10 @@ class RemindersListViewModel(val app: Application, private val dataSource: Remin
             val result = dataSource.getReminders()
             showLoading.postValue(false)
             when (result) {
-                is Result.Success<*> -> {
+                is Result.Success -> {
                     val dataList = ArrayList<ReminderDataItem>()
                     dataList.addAll(
-                        (result.data as List<ReminderDTO>).map { reminder ->
+                        result.data.map { reminder ->
                             // map the reminder data from the DB to the be ready to be displayed on the UI
                             ReminderDataItem(
                                 reminder.title,
@@ -60,7 +59,7 @@ class RemindersListViewModel(val app: Application, private val dataSource: Remin
      * Inform the user that there's not any data if the remindersList is empty
      */
     private fun invalidateShowNoData() {
-        showNoData.value = remindersList.value == null || remindersList.value!!.isEmpty()
+        showNoData.value = remindersList.value == null || remindersList.value?.isEmpty() == true
     }
 
     fun logout() {

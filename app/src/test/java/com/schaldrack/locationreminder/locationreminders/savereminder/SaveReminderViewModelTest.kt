@@ -54,7 +54,7 @@ class SaveReminderViewModelTest {
     @Test
     fun editReminder_SetsLiveDataOfReminder_ToBeEdited() {
         // call Edit reminder and passing item1
-        saveReminder.editReminder(item1)
+        saveReminder.updateReminderLocation(item1)
         // We expect that our saveReminderViewModel is holding the data of reminder1.
         assertThat(saveReminder.reminderTitle.getOrAwaitValue(), `is`(item1.title))
         assertThat(saveReminder.reminderDescription.getOrAwaitValue(), `is`(item1.description))

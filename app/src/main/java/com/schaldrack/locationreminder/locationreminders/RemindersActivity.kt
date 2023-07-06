@@ -54,7 +54,7 @@ class RemindersActivity : AppCompatActivity() {
         }
 
         if (reminderDataItem != null) {
-            viewModel.editReminder(reminderDataItem)
+            viewModel.updateReminderLocation(reminderDataItem)
             navController.navigate(ReminderListFragmentDirections.toSaveReminder())
         }
     }
